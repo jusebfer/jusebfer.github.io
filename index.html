@@ -1,8 +1,163 @@
-<html>
-    <h1>Header</h1>
-    <p>paragraph</p>
-    <a href="./another.html">another page</a>
-    <br>
-    <a href="./papers/a.pdf">a pdf</a>
-    <img src="./Images/unnamed.jpg"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Sebastián Fernández-Ibañez</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .top-row {
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+        .top-row a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .content {
+            display: flex;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .content img {
+            max-width: 100%;
+            width: 200px;
+            height: 300px;
+            height: auto;
+            margin-right: 20px;
+            margin-top:20px;
+        }
+        .collapsible {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            padding: 0px;
+            width: auto;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 14px;
+        }
+        .collapsible-content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: white;
+        }
+        .text {
+            flex: 1;
+            .image-with-caption {
+            }
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+        }
+        .caption {
+            text-align: center;
+            margin-top: 10px;
+            color: #555;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-row">
+        <a href="#">Research</a>
+        <a href="./teaching.html">Teaching</a>
+        <a href="./cv.pdf" target="_blank">CV</a>
+    </div>
+
+    <div class="content">
+        <div class="image-with-caption">
+            <img src="./Images/headshot.jpg">
+            <div class="caption">jusebfer (at) umich.edu</div>
+        </div>
+        <div class="text">
+            <h1>Juan Sebastián Fernández-Ibáñez</h1>
+            <p> I am a job market candidate in Economics at the University of Michigan.
+            <p> My research focuses on Trade, using structural estimation.
+        <h2>Job Market Paper</h2>
+        <u><strong>The Dynamic Consequences of Trade Restrictions</strong></u>
+        <p> Merge Costinot with Rosen to explore the welfare effects of export restrictions in a dynamic setting: cattle raising in Argentina. Domestic producers end up losing the most.</p>
+        <button
+          type="button"
+          class="collapsible"
+        >
+          [Abstract]
+        </button>
+        <div class="collapsible-content">
+          <p align="justify">
+
+          How is capital reallocated as a response to trade shocks?
+          We study that question in the context of restrictions on the exports of beef in Argentina in the period 2006-2015.
+          We build a novel county-level dataset of yearly cattle stock disaggregated by variety.
+          As the ban takes place, we observe a significant contraction of export-intensive varieties, and a reduction of their relative prices.
+          We build a structural dynamic model extending static land share use models with the dynamic problem of cattle raising.
+          The model sees the initial decrease in the cattle stock as responsible for low prices and capital depletion of the export sector, with spillover effects on domestic varieties.
+            </p>
+        </div>
+
+        <h2>Working Papers</h2>
+        <u><strong>Rationally Inattentive Exporters</strong></u>
+        <p>
+            Melitz meets Matejka; add a layer of rational inattention theory to the standard model of international trade. Information costs muddy selection into exporting and affect middle-sized firms the most.
+        </p>
+        <button
+          type="button"
+          class="collapsible"
+        >
+          [Abstract]
+        </button>
+        <div class="collapsible-content">
+          <p align="justify">
+            Can information act as a trade barrier?
+            This paper develops a model of rationally inattentive exporters to answer the question.
+            In the model, firms do not know their export revenue, but instead have a prior.
+            The prior can be complemented with a costly signal of arbitrary precision.
+            The theory reveals (1) information costs affect medium-sized firms the most, (2) the effect on trade volume is indeterminate, (3) information frictions cause inefficient selection into exporting.
+            I take the model to the data using the Colombian Manufactur ing Survey of 2017.
+            Being fully informed costs the firm as much as the fixed cost of exporting.
+            The estimates of fixed costs are in the range observed in the literature.
+            </p>
+        </div>
+        <h2>Work in Progress</h2>
+        <u><strong>The Effects of Competition in the Argentine Commercial Airline Industry</strong></u>
+        <p>
+            Study the changes brought about from a shift of a domestic market being served by a state monopoly to allowing free entry of private firms.
+        </p>
+
+    </div>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+
+</body>
 </html>
