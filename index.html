@@ -77,10 +77,24 @@
             color: #555;
             width:100%;
         }
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .content img {
+                margin-right: 0px;
+                margin-top:20px;
+            }
+        .caption {
+            margin-right: 0px;
+            color: #555;
+            width:100%;
+            }
+        }
     </style>
 </head>
 <body>
-
     <div class="top-row">
         <a href="#">Research</a>
         <a href="./teaching.html">Teaching</a>
@@ -172,6 +186,5 @@
         });
       }
     </script>
-
 </body>
 </html>
