@@ -56,10 +56,24 @@
             margin-right: 20px;
             color: #555;
         }
+        @media (max-width: 768px) {
+            .content {
+                width: auto;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 20px;
+            }
+            .content img {
+                margin-right: 0px;
+                margin-top:20px;
+            }
+            .caption {
+                margin-right: 0px;
+            }
+        }
     </style>
 </head>
 <body>
-
     <div class="top-row">
         <a href="./index.html">Research</a>
         <a href="#">Teaching</a>
@@ -94,6 +108,5 @@
         </ul>
 
         </div>
-
 </body>
 </html>
